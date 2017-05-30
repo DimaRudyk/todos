@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html ng-app="TDapp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/angular.min.js">
+    <link rel="stylesheet" href="js/app.js">
+    <link rel="stylesheet" href="js/controller.js">
+</head>
+
+<body ng-controller="MTDapp">
+    <div class="page header">
+        <h1>To Dos</h1>
+    </div>
+    <div>
+        <input ng-model="text" placeholder="Write to dos">
+        <button ng-click="addtodoarray(text)">added</button>
+    </div>
+
+
+</body>
+
+</html>
