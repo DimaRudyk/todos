@@ -18,7 +18,20 @@
         <button ng-click="addtodoarray(text)">added</button>
     </div>
     <div>
-<tr> </tr>
+        <table>
+            <header>
+                <tr>
+                    <th>To Do</th>
+                    <th>Done</th>
+                </tr>
+            </header>
+            <tbody>
+                <tr ng-repeat="$scope.todoarray">
+                <td>{{$scope.todoarray.purchase}}</td>
+                <td><input type="checkbox" ng-model="$scope.todoarray.done"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 

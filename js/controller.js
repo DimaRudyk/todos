@@ -5,7 +5,7 @@ todoapp.controller("MTDapp", function ($scope) {
     $scope.todoarray = JSON.parse(localStorage.getItem("mykey"));
     $scope.addtodoarray = function (text) {
         if (text!= "") {
-            $scope.todoarray.push();
+            $scope.todoarray.push({purchase: text, done: falls});
             localStorage.setItem("mykey", $scope.todoarray);
         }
         else{
