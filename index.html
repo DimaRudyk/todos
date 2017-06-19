@@ -1,39 +1,28 @@
 ﻿<!doctype html>
-<html ng-app="TDapp">
+<html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="js/angular.min.js">
-    <link rel="stylesheet" href="js/app.js">
-    <link rel="stylesheet" href="js/controller.js">
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>    
+    <link rel="stylesheet" href="node_modules/devextreme/dist/css/dx.common.css">
+    <link rel="stylesheet" href="node_modules/devextreme/dist/css/dx.spa.css">
+    <link rel="stylesheet" href="node_modules/devextreme/dist/css/dx.dark.css"> 
+    <script src="node_modules/devextreme/dist/js/dx.all.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+   
+    
 </head>
 
-<body ng-controller="MTDapp">
-    <div class="page header">
-        <h1>To Dos</h1>
+<body class="dx-viewport">
+    <h1>ToDos</h1>
+    <div class="demo-container" ng-app="DemoApp" ng-controller="DemoController">
+        <div id="gridContainer" dx-data-grid="dataGridOptions"></div>
     </div>
-    <div>
-        <input ng-model="text" placeholder="Write to dos">
-        <button ng-click="addtodoarray(text)">added</button>
-    </div>
-    <div>
-        <table>
-            <header>
-                <tr>
-                    <th>To Do</th>
-                    <th>Done</th>
-                </tr>
-            </header>
-            <tbody>
-                <tr ng-repeat="$scope.todoarray">
-                <td>{{$scope.todoarray.purchase}}</td>
-                <td><input type="checkbox" ng-model="$scope.todoarray.done"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
 
 </body>
 

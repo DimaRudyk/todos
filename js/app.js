@@ -1,1 +1,1 @@
-﻿var todoapp = angular.module("TDapp",[])
+﻿var DemoApp = angular.module('DemoApp', ['dx']);
