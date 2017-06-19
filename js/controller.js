@@ -1,10 +1,14 @@
 DemoApp.controller('DemoController', function DemoController($scope) {
     $scope.dataGridOptions = {
         dataSource: data,
+        scrolling: {
+            mode: "virtual"
+        },
         columns: [
             {
                 dataField: "ToDo",
-                sortOrder: "asc"
+                sortOrder: "asc",
+                validationRules: [{ type: "required" }]
             },
             {
                 dataField: "Date",
@@ -12,7 +16,8 @@ DemoApp.controller('DemoController', function DemoController($scope) {
                 editorOptions: {
                     type: 'time'
                 },
-                format: "longTime"
+                format: "shortTime",
+                validationRules: [{ type: "required" }]
             },
             {
                 dataField: "Done",
@@ -23,7 +28,7 @@ DemoApp.controller('DemoController', function DemoController($scope) {
                 }
             }
             
-        ],
+        ],         
         editing: {
             mode: 'row',
             allowUpdating: true,
